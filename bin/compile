@@ -37,7 +37,7 @@ PATH=${cache}/bin/elm-${ELM_VERSION}:$PATH
 mkcd ${cache}/bin/elm-${ELM_VERSION}
 echo "-----> Retrieving ${ELM_VERSION}"
 wget -nv -c "https://github.com/elm/compiler/releases/download/${ELM_VERSION}/binary-for-linux-64-bit.gz"
-tar -zxvf binaries-for-linux.tar.gz
+gzip -d binary-for-linux-64-bit.gz
 mv binary-for-linux-64-bit elm
 
 chmod -R a+x ${cache}/bin
